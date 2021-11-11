@@ -9,6 +9,8 @@ namespace LogicalPrograms
         int num, counter = 0;
         public void CheckPrime()
         {
+            Console.WriteLine("Enter the number");
+            int num = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= num; i++)
             {
                 if (num % i == 0)
