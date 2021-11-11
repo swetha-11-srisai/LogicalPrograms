@@ -10,7 +10,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Fibnoccie,2-Prime,3-Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Fibnoccie,2-Prime,3-Reverse,4-Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -22,8 +22,12 @@ namespace LogicalPrograms
                         PrimeNumber prime = new PrimeNumber();
                         prime.CheckPrime();
                         break;
-
                     case 3:
+                        ReverseNumber rev = new ReverseNumber();
+                        rev.Reverse();
+                        break;
+
+                    case 4:
                         flag = false;
                         break;
                 }
