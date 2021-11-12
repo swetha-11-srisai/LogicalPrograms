@@ -10,7 +10,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Fibnoccie,2-Prime,3-Reverse,4-Perfect,5-Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Fibnoccie,2-Prime,3-Reverse,4-Perfect,5-Temprature,6-Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -32,8 +32,18 @@ namespace LogicalPrograms
                         PerfectNumber perfect = new PerfectNumber();
                         perfect.CheckPerfect(num);
                         break;
-
                     case 5:
+                        Console.WriteLine("Enter the Celcsius value");
+                        double celTemp = Convert.ToDouble(Console.ReadLine());
+                        TempratureConvertion temp = new TempratureConvertion();
+                        temp.convertToFahrenheit(celTemp);
+                        Console.WriteLine("Enter the Fahrenheit value");
+                        double fahTemp = Convert.ToDouble(Console.ReadLine());
+                        TempratureConvertion temp1 = new TempratureConvertion();
+                        temp1.convertToCelsius(fahTemp);
+                        break;
+
+                    case 6:
                         flag = false;
                         break;
                 }
