@@ -10,7 +10,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Fibnoccie,2-Prime,3-Reverse,4-Perfect,5-Temprature,6-Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Fibnoccie,2-Prime,3-Reverse,4-Perfect,5-Temprature,6-MonthlyPayment,7-Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -42,8 +42,18 @@ namespace LogicalPrograms
                         TempratureConvertion temp1 = new TempratureConvertion();
                         temp1.convertToCelsius(fahTemp);
                         break;
-
                     case 6:
+                        MonthlyPayment month = new MonthlyPayment();
+                        Console.WriteLine("Enter the Principal : ");
+                        double p = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Enter the Year : ");
+                        double y = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Enter the Rate : ");
+                        double r = Convert.ToDouble(Console.ReadLine());
+                        month.monthlyCheck(p,y,r);
+                        break;
+
+                    case 7:
                         flag = false;
                         break;
                 }
